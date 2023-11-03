@@ -22,7 +22,7 @@ public class Basetest {
 	public static Properties prop;
 	FileInputStream file;
 	public static WebDriver driver;
-	// protected ExtentReports extentreports;
+	 protected ExtentReports extentreports;
 
 	public Basetest() {
 
@@ -40,10 +40,10 @@ public class Basetest {
 			e.printStackTrace();
 		}
 
-//		extentreports = new ExtentReports();
-//		ExtentSparkReporter spark= new ExtentSparkReporter(".\\target\\report.html");
-//	    extentreports.attachReporter(spark);
-//	    
+		extentreports = new ExtentReports();
+		ExtentSparkReporter spark= new ExtentSparkReporter(".\\target\\report.html");
+	    extentreports.attachReporter(spark);
+	    
 
 	}
 
@@ -62,7 +62,8 @@ public class Basetest {
 		driver.get(prop.getProperty("url"));
 		driver.manage().deleteAllCookies();
 	
-		// extentreports.flush();
+		 extentreports.flush();
+		 
 
 	}
 

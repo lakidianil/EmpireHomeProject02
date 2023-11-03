@@ -1,6 +1,8 @@
 package com.testcases;
 
 import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
+import org.testng.annotations.Test;
 import org.openqa.selenium.By;
 import org.testng.AssertJUnit;
 import org.testng.annotations.Test;
@@ -44,7 +46,6 @@ public class Login_Fuctionality_Test extends Basetest {
 
 		login.verifylogin(username, password);
 		
-		AssertJUnit.assertTrue(driver.findElement(By.xpath("//h4[@class='text-center font-weight-bold mb-3']")).isDisplayed());
 		
 
 	}

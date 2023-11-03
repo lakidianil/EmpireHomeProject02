@@ -9,6 +9,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.devtools.idealized.Javascript;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -21,9 +22,9 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.List;
+import java.util.Set;
 
 public class utils {
-
 	private static WebDriver driver;
 
 	public static String[][] Data(String sheetname1) throws IOException {
@@ -83,19 +84,19 @@ public class utils {
 		R.keyPress(KeyEvent.VK_P);
 		R.keyRelease(KeyEvent.VK_P);
 	}
-	
+
 	public static void drop() throws Throwable {
 		java.awt.Robot R = new java.awt.Robot();
 		R.keyPress(KeyEvent.VK_B);
 		R.keyRelease(KeyEvent.VK_B);
 	}
-	
+
 	public static void drop1() throws Throwable {
 		java.awt.Robot R = new java.awt.Robot();
 		R.keyPress(KeyEvent.VK_S);
 		R.keyRelease(KeyEvent.VK_S);
 	}
-	
+
 	public static void file() throws Throwable {
 		StringSelection selection = new StringSelection("\"C:\\Users\\DELL\\OneDrive\\Pictures\\chair.jfif\"");
 		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(selection, null);
@@ -113,14 +114,15 @@ public class utils {
 		s.selectByIndex(index);
 
 	}
+
 	public static void waitForElementToBeClickable(WebElement element) {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 		wait.until(ExpectedConditions.elementToBeClickable(element));
 	}
 
-	public static void scroll(WebElement element) {
-		JavascriptExecutor executor = (JavascriptExecutor) driver;
-		executor.executeScript("arguments[0].scrollIntoView({block: 'center'});", element);
+	public static void scroll() {
+		JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
+		jsExecutor.executeScript("window.scrollTo(0, 1800);");
 
 	}
 
@@ -134,19 +136,29 @@ public class utils {
 		wait.until(ExpectedConditions.invisibilityOf(element));
 	}
 
-	  
-
-	    public static void captureAndSaveScreenshot(WebDriver driver, String destFilePath) {
-	        try {
-	            TakesScreenshot screenshot = (TakesScreenshot) driver;
-	            File srcFile = screenshot.getScreenshotAs(OutputType.FILE);
-	            File destFile = new File(destFilePath);
-	            FileUtils.copyFile(srcFile, destFile);
-	        } catch (Exception e) {
-	            e.printStackTrace();
-	        }
-	    }
+	public static void captureAndSaveScreenshot(WebDriver driver, String destFilePath) {
+		try {
+			TakesScreenshot screenshot = (TakesScreenshot) driver;
+			File srcFile = screenshot.getScreenshotAs(OutputType.FILE);
+			File destFile = new File(destFilePath);
+			FileUtils.copyFile(srcFile, destFile);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
+
+	public static void WindowHandle() {
+		String parentWindowHandle = driver.getWindowHandle();
+		Set<String> windowHandles = driver.getWindowHandles();
+		for (String windowHandle : windowHandles) {
+			if (!windowHandle.equals(parentWindowHandle)) {
+				driver.switchTo().window(windowHandle);
+				break;
+			}
+
+		}
+
+		}
 	
 
-
+	}

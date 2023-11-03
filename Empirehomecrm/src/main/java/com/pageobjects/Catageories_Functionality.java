@@ -79,32 +79,32 @@ public class Catageories_Functionality extends Basetest {
 		Thread.sleep(2000);
 		AddNewCategories.click();
 		Thread.sleep(2000);
-		CategoriesName.sendKeys("God Room");
+		CategoriesName.sendKeys(prop.getProperty("Categories"));
 		Thread.sleep(2000);
 		savebutton.click();
 		Thread.sleep(2000);
 		utils.Dropdown(editlength, "100");
 		Thread.sleep(2000);
-		searchCategories.sendKeys("God Room");
+		searchCategories.sendKeys(prop.getProperty("Categories"));
 
 	}
 
 	public void Catageories_Functionality_Edit() throws Throwable {
 		Thread.sleep(2000);
 		searchCategories.clear();
-		searchCategories.sendKeys("God Room");
+		searchCategories.sendKeys(prop.getProperty("Categories"));
 		Thread.sleep(2000);
 		EditButton.click();
 		Thread.sleep(2000);
 		Thread.sleep(2000);
 		CategoriesName.clear();
-		CategoriesName.sendKeys("Hall Room");
+		CategoriesName.sendKeys(prop.getProperty("RECategories"));
 		Thread.sleep(2000);
 		savebutton.click();
 		Thread.sleep(2000);
 		utils.Dropdown(editlength, "100");
 		Thread.sleep(2000);
-		searchCategories.sendKeys("Hall Room");
+		searchCategories.sendKeys(prop.getProperty("RECategories"));
 
 	}
 
@@ -117,7 +117,7 @@ public class Catageories_Functionality extends Basetest {
 		utils.drop1();
 		Thread.sleep(2000);
 		searchCategories.clear();
-		searchCategories.sendKeys("Hall Room");
+		searchCategories.sendKeys(prop.getProperty("RECategories"));
 
 	}
 
