@@ -195,7 +195,7 @@ public class End_End_Functionality extends Basetest {
 		WhatsappNumber.sendKeys(prop.getProperty("WhatsappNumber"));
 		Thread.sleep(2000);
 		JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
-		jsExecutor.executeScript("window.scrollTo(0, 800);");
+		jsExecutor.executeScript("window.scrollTo(0, 300);");
 
 		Thread.sleep(2000);
 		Save.click();
@@ -241,7 +241,7 @@ public class End_End_Functionality extends Basetest {
 		}
 
 		JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
-		jsExecutor.executeScript("window.scrollTo(0, 800);");
+		jsExecutor.executeScript("window.scrollTo(0, 200);");
 
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 		WebElement addToCartButton = wait
@@ -260,7 +260,7 @@ public class End_End_Functionality extends Basetest {
 		Thread.sleep(2000);
 		clickbutton.click();
 		JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
-		jsExecutor.executeScript("window.scrollTo(0, 800);");
+		jsExecutor.executeScript("window.scrollTo(0, 500);");
 		Thread.sleep(2000);
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 		WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(

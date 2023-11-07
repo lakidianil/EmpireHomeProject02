@@ -68,7 +68,7 @@ public class End_End_Functionality_Test extends Basetest {
 
 	@Test(priority = 7)
 	public void End_End_Functionality_verifyproductslect() throws Throwable {
-		End_End.productslect_Actions(1);
+		End_End.productslect_Actions(0);
 
 	}
 

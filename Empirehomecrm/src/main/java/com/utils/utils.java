@@ -122,7 +122,7 @@ public class utils {
 
 	public static void scroll() {
 		JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
-		jsExecutor.executeScript("window.scrollTo(0, 1800);");
+		jsExecutor.executeScript("window.scrollTo(0, 800);");
 
 	}
 
