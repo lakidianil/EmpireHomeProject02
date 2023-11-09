@@ -5,6 +5,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.base.Basetest;
+import com.utils.utils;
 
 public class LoginPage extends Basetest {
 
@@ -30,7 +31,6 @@ public void LoginPage() {
 	userid.sendKeys(prop.getProperty("username")); 
 	   pass.sendKeys(prop.getProperty("password"));
 	   loginbutton.click();
-	
 }
 
 
@@ -40,7 +40,6 @@ public void verifylogin() {
 	userid.sendKeys(prop.getProperty("username")); 
 	   pass.sendKeys(prop.getProperty("password"));
 	   loginbutton.click();
-	
 	
 	
 	   

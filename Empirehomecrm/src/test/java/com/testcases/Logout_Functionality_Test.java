@@ -1,6 +1,8 @@
 package com.testcases;
 
 import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
+import org.testng.annotations.Test;
 import org.openqa.selenium.By;
 import org.testng.AssertJUnit;
 import org.testng.annotations.Test;

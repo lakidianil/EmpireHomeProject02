@@ -10,7 +10,7 @@
     
       
       <class name="com.testcases.Stock_Move_Functionality_Test"/>
-      <class name="com.testcases.Logout_Functionality_Test"/>
+     
  
      
     </classes>

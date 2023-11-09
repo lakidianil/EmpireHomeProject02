@@ -3,17 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.testcases.End_End_Functionality_Test">
+      <class name="com.testcases.Logintest">
         <methods>
-          <include name="End_End_Functionality_verifyLogout"/>
+          <include name="loginvalidation"/>
           <include name="setup"/>
           <include name="teardown"/>
-          <include name="End_End_Functionality_verifyCreateQuote"/>
-          <include name="End_End_Functionality_verifySubmitPayment"/>
-          <include name="End_End_Functionality_verifyAdminpanelLogin"/>
-          <include name="End_End_Functionality_verifyAddToCart"/>
         </methods>
-      </class> <!-- com.testcases.End_End_Functionality_Test -->
+      </class> <!-- com.testcases.Logintest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

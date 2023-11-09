@@ -10,7 +10,7 @@
         <methods>
           <include name="setup"/>
           <include name="teardown"/>
-          <include name="Stockmovevalidation"/>
+          <include name="Stockmovevalidation" invocation-numbers="0"/>
         </methods>
       </class> <!-- com.testcases.Stock_Move_Functionality_Test -->
     </classes>

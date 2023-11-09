@@ -9,7 +9,7 @@ import org.testng.AssertJUnit;
 import com.base.Basetest;
 import com.utils.utils;
 
-public class Add_Product_Inventory_Functionality extends Basetest {
+public class Add_Product_Inventory_Functionality extends Basetest 	 {
 
 	@FindBy(xpath = "//span[@class='pe-7s-keypad']")
 	WebElement clickkeypad;
